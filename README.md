@@ -146,7 +146,7 @@ Content-Type: application/json
         }
 }
 ```
-##Errors
+## Errors
 
 If a userID, roleId or teamId is not found, the service throws a Exception with the proper message
 
