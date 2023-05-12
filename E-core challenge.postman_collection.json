@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "5e2ce747-e661-4af6-aaeb-c334b4f19944",
+		"name": "E-core challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24774375",
+		"_collection_link": "https://www.postman.com/pruebaetica/workspace/e-core-challenge/collection/24774375-5e2ce747-e661-4af6-aaeb-c334b4f19944?action=share&creator=24774375&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "GET USERS AMAZON",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cgjresszgg.execute-api.eu-west-1.amazonaws.com/users",
+					"protocol": "https",
+					"host": [
+						"cgjresszgg",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER AMAZON",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cgjresszgg.execute-api.eu-west-1.amazonaws.com/users/fd282131-d8aa-4819-b0c8-d9e0bfb1b75c",
+					"protocol": "https",
+					"host": [
+						"cgjresszgg",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users",
+						"fd282131-d8aa-4819-b0c8-d9e0bfb1b75c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TEAMS AMAZON",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cgjresszgg.execute-api.eu-west-1.amazonaws.com/teams",
+					"protocol": "https",
+					"host": [
+						"cgjresszgg",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TEAM AMAZON",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cgjresszgg.execute-api.eu-west-1.amazonaws.com/teams/7676a4bf-adfe-415c-941b-1739af07039b",
+					"protocol": "https",
+					"host": [
+						"cgjresszgg",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"teams",
+						"7676a4bf-adfe-415c-941b-1739af07039b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Roles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Scrum Master\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/roles/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ROLES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/roles/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Roles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"371d2ee8-cdf4-48cf-9ddb-04798b79ad9e\",\n    \"teamId\":\"7676a4bf-adfe-415c-941b-1739af07039b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/roles/assign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roles",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MEMBERSHIPS BY ROLE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/roles/9df1a424-afe1-45bc-adf8-5c4aaf4fedf9/memberships",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roles",
+						"9df1a424-afe1-45bc-adf8-5c4aaf4fedf9",
+						"memberships"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ROLE BY MEMBERSHIP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/roles/teams/TEAM/users/USER",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roles",
+						"teams",
+						"TEAM",
+						"users",
+						"USER"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCALHOST GET USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/fd282131-d8aa-4819-b0c8-d9e0bfb1b75c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"fd282131-d8aa-4819-b0c8-d9e0bfb1b75c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCALHOST GET TEAM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/teams/fd282131-d8aa-4819-b0c8-d9e0bfb1b75c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"teams",
+						"fd282131-d8aa-4819-b0c8-d9e0bfb1b75c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
