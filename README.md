@@ -120,9 +120,10 @@ Content-Type: application/json
 }
 ```
 
-###Considerations
+### Considerations
 - If the request doesn't not have a roleID, the default role will be assigned to the userID
 - If the request, assigns a new role to already created membership with a role, it's going to be updated with the new role in request
+
 #### Request
 ```css
 POST /roles/assign
@@ -269,7 +270,7 @@ This endpoint look up the role assigned to specif membership
 ```
 
 
-##Suggestion for improvement in the Team or User services
+## Suggestion for improvement in the Team or User services
 
 - One of suggestions maybe it's to improve the speed of the response, I will think maybe it's a servless service and has his cold start.
 - When I make a POST request to /users/, it doesn't respond with an error or anything; it responds as if a GET request had been made
